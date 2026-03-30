@@ -1,0 +1,59 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "vram-pager"
+version = "0.1.0"
+description = "Compressed GPU memory paging for diffusion and video models"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [
+    { name = "Will Riley" },
+]
+keywords = ["vram", "gpu", "paging", "diffusion", "video", "cuda", "pytorch"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "torch>=2.0",
+    "safetensors",
+]
+
+[project.urls]
+Homepage = "https://github.com/willriley/vram-pager"
+Repository = "https://github.com/willriley/vram-pager"
+
+[tool.hatch.build.targets.wheel]
+packages = ["pager"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"build" = "pager/build"
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "pager/**",
+    "build/**",
+    "kernel/**",
+    "tools/**",
+    "LICENSE",
+    "README.md",
+    "pyproject.toml",
+]
+exclude = [
+    "comfyui_node/**",
+    "tests/**",
+    "scripts/**",
+    "research/**",
+    "private_docs/**",
+    "assets/**",
+]

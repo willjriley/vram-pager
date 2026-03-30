@@ -1,0 +1,11 @@
+private_docs/
+CLAUDE.md
+__pycache__/
+*.pyc
+*.exp
+*.lib
+*.obj
+*.o
+.ninja_*
+.env
+dist/

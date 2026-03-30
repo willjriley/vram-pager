@@ -1,0 +1,44 @@
+[
+  {
+    "gpu": "NVIDIA GeForce RTX 4090 Laptop GPU",
+    "vram_gb": 17.2,
+    "arch": "sm_89",
+    "platform": "Windows 11",
+    "kernel_ms": 0.277,
+    "error": 0.0,
+    "correct": true,
+    "fp32_transfer_ms": 8.4,
+    "int8_total_ms": 2.5,
+    "speedup": 3.42,
+    "pcie_bandwidth_gbs": 12296,
+    "notes": "Local laptop GPU, PCIe Gen4 x16"
+  },
+  {
+    "gpu": "NVIDIA RTX A6000",
+    "vram_gb": 50.9,
+    "arch": "sm_86",
+    "platform": "Linux (RunPod)",
+    "kernel_ms": 0.194,
+    "error": 0.0,
+    "correct": true,
+    "fp32_transfer_ms": 5.3,
+    "int8_total_ms": 1.5,
+    "speedup": 3.46,
+    "pcie_bandwidth_gbs": 19627,
+    "notes": "Server GPU, faster PCIe, Ampere architecture"
+  },
+  {
+    "gpu": "NVIDIA L40S",
+    "vram_gb": 50.9,
+    "arch": "sm_89",
+    "platform": "Linux (RunPod)",
+    "kernel_ms": 0.197,
+    "error": 0.0,
+    "correct": true,
+    "fp32_transfer_ms": 6.6,
+    "int8_total_ms": 2.3,
+    "speedup": 2.88,
+    "pcie_bandwidth_gbs": 15743,
+    "notes": "Ada Lovelace server GPU"
+  }
+]

@@ -2,7 +2,7 @@
 
 **Compressed GPU Memory Paging for Diffusion & Video Models**
 
-Run large diffusion and video generation models on consumer GPUs (16GB VRAM) with 3.4x faster layer transfers via INT8 compressed paging, or 1.8x with lossless FP16. Verified on Wan 2.2 14B — brings compressed GPU paging to the image/video AI community.
+Run full-precision AI models on consumer GPUs that would otherwise crash or require quantization. Compressed GPU memory paging for diffusion and video models — verified on Wan 2.2 14B (54GB) running on a 16GB RTX 4090.
 
 ---
 

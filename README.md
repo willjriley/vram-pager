@@ -130,6 +130,12 @@ If GGUF Q4 gives you the quality you need, keep using it — it's faster. But if
 
 **In short:** If ComfyUI is offloading layers to RAM and your renders are slow, this helps. If your model already fits or is already quantized and you're happy with the quality, it doesn't.
 
+**A note on ComfyUI v0.16+ and dynamic VRAM:** ComfyUI's built-in dynamic VRAM system (enabled by default since v0.16, powered by aimdo) handles VRAM offloading very well on its own. On the latest ComfyUI, the pager provides modest additional benefit (~10% at production resolution) when stacked with dynamic VRAM. The pager is most useful for:
+- Users on **older ComfyUI versions** (pre-v0.16) without dynamic VRAM
+- **AMD GPU users** — aimdo is NVIDIA-only, so AMD users don't get dynamic VRAM
+- Users who **can't upgrade** due to custom node compatibility
+- Running **full-precision models alongside LoRAs** where GGUF isn't an option
+
 ---
 
 ## Getting Started

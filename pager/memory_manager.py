@@ -77,7 +77,7 @@ class PagedWeightStore:
         self.weights: Dict[str, dict] = {}
         self._total_bytes = 0
         if not self.pin:
-            logging.info("[VRAMPager] Pinned memory disabled — using pageable CPU memory")
+            logging.info("[VRAMPager] Deferring pinned memory to ComfyUI — avoiding pin conflicts")
 
     def quantize_and_store(self, name: str, tensor: torch.Tensor):
         """Store a weight tensor in compressed pinned memory."""
